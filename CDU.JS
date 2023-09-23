@@ -1,121 +1,107 @@
-function convertUnits() {
-    const inputValue = parseFloat(document.getElementById('inputValue').value);
-    const unitType = document.getElementById('unitType').value;
-    const unitSelect = document.getElementById('unitSelect');
-    let sinbuni;//simbolo de unidad
-  
-    if (unitType === 'lineal') {
-      sinbuni = 'm';
-    } else if (unitType === 'area') {
-      sinbuni= 'm2'; 
-    }else if (unitType === 'volumen'){ 
+function convertUnits(inputValue, unitType) {
+  // Declarar variables
+  let result;
+  let sinbuni = "m";
+
+  // Comprobar si el valor de entrada es un número
+  if (!isNaN(inputValue)) {
+
+    // Comprobar el tipo de unidad
+    switch (unitType) {
+
+      // Unidades lineales
+      case "km":
+        result = inputValue / 1000;
+        sinbuni = "km";
+        break;
+      case "hm":
+        result = inputValue / 100;
+        sinbuni = "hm";
+        break;
+      case "m":
+        result = inputValue;
+        sinbuni = "m";
+        break;
+      case "dm":
+        result = inputValue * 10;
+        sinbuni = "dm";
+        break;
+      case "cm":
+        result = inputValue * 100;
+        sinbuni = "cm";
+        break;
+      case "mm":
+        result = inputValue * 1000;
+        sinbuni = "mm";
+        break;
+
+      // Unidades cuadradas
+      case "km2":
+        result = inputValue / 1000000;
+        sinbuni = "km2";
+        break;
+      case "ha":
+        result = inputValue / 10000;
+        sinbuni = "ha";
+        break;
+      case "m2":
+        result = inputValue;
+        sinbuni = "m2";
+        break;
+      case "dm2":
+        result = inputValue * 100;
+        sinbuni = "dm2";
+        break;
+      case "cm2":
+        result = inputValue * 10000;
+        sinbuni = "cm2";
+        break;
+      case "mm2":
+        result = inputValue * 1000000;
+        sinbuni = "mm2";
+        break;
+
+      // Unidades cúbicas
+      case "m3":
+        result = inputValue;
         sinbuni = "m3";
+        break;
+      case "dm3":
+        result = inputValue / 1000;
+        sinbuni = "dm3";
+        break;
+      case "cm3":
+        result = inputValue / 1000000;
+        sinbuni = "cm3";
+        break;
+      case "mm3":
+        result = inputValue / 1000000000;
+        sinbuni = "mm3";
+        break;
+      case "lt":
+        result = inputValue * 1000;
+        sinbuni = "lt";
+        break;
+      case "gl":
+        result = inputValue * 264.172;
+        sinbuni = "gl";
+        break;
+
+      // Caso predeterminado
+      default:
+        result = "Invalid unit";
+        break;
     }
-    }
-  
-    // conversor de unidades lineales
-    if (unitType === 'lineal') {
-      for (let i = 0; i < unitSelect.options.length; i++) {
-        if (unitSelect.options[i].value.endsWith('2')) {
-          unitSelect.options[i].style.display = 'none';
-        } else {
-          unitSelect.options[i].style.display = '';
-        }
-      }
-    //conversor de unidades al cuadrado^2
-    }if (unitType === 'area') {
-      for (let i = 0; i < unitSelect.options.length; i++) {
-        if (unitSelect.options[i].value.endsWith('2')) {
-          unitSelect.options[i].style.display = '';
-        } else {
-          unitSelect.options[i].style.display = 'none';
-        }
-      }
-    
-    //conversor de unidades a volumen^3
-    } else if (unitType === 'volumen') {
-    for (let i = 0; i < unitSelect.options.length; i++) {
-      if (unitSelect.options[i].value.endsWith('2')) {
-        unitSelect.options[i].style.display = '';
-      } else {
-        unitSelect.options[i].style.display = 'none';
-      }
-    }
+
+    // Actualizar el campo de resultado
+    document.getElementById("outputResult").innerText = result.toFixed(6) + " " + sinbuni;
+  } else {
+    // Si el valor de entrada no es un número, establecer el resultado en una cadena vacía
+    result = "";
+    // Actualizar el campo de resultado
+    document.getElementById("outputResult").innerText = result;
   }
-  
-    if (!isNaN(inputValue)) {
-      let result;
-  
-      switch (unitSelect.value) {
-        // conversor de unidades metro lineal
-        case 'km':
-          result = inputValue / 1000; // 1 kilometer = 1000 meters
-          break;
-        case 'hm':
-          result = inputValue / 100; // 1 hectometer = 100 meters
-          break;
-        case 'dm':
-          result = inputValue * 10; // 1 decimeter = 0.1 meters
-          break;
-        case 'm':
-          result = inputValue; // 1 meter = 1 meter
-          break;
-        case 'cm':
-          result = inputValue * 100; // 1 centimeter = 0.01 meters
-          break;
-        case 'mm':
-          result = inputValue * 1000; // 1 millimeter = 0.001 meters
-          break;
-  
-        // conversor de unidades area
-        case 'km2':
-          result = inputValue / 1000000; // 1 kilometro cuadrado= 1,000,000 metros cuadrados
-          break;
-        case 'ha':
-          result = inputValue / 10000; // 1 hectarea = 10,000 metros cuadrados
-          break;
-        case 'm2':
-          result = inputValue; // 1 metro cuadrado
-          break;
-        case 'dm2':
-          result = inputValue * 100; // 1 decimetro cuadrado = 100 centimetros cuadrados
-          break;
-        case 'cm2':
-          result = inputValue * 10000; // 1 centimetro cuadrado = 10,000 milimetros cuadrados
-          break;
-        case 'mm2':
-          result = inputValue * 1000000; // 1 milimetro cuadrado = 0.000001 metros cuadrados
-          break;
-        
-        //Conversor a Unidades de Volumenes
-        case 'm3':
-          result = inputValue / 1000000; // 1 metro cubico
-          break;
-        case 'dm<sup>3</sup>':
-          result = inputValue / 10000; // 1 decimetro cubico
-          break;
-        case 'cm<sup>3</sup>':
-          result = inputValue; // 1 centimetro cubico
-          break;
-        case 'mm<sup>3</sup>':
-          result = inputValue * 100; // 1 milimetro cubico
-          break;
-        case 'lt':
-          result = inputValue * 1000; // 1 Litro
-          break;
-        case 'gl':
-          result = inputValue * 264.172; // 1 Galon
-          break;
-        default:
-          result = 'Invalid unit';
-      }
-  
-      document.getElementById('outputResult').innerText = result.toFixed(6) + ' ' + sinbuni;
-    } else if (
-      document.getElementById('outputResult').innerText = '',
-    )if(
-        document.getElementById("outputResult").innerText= "";
-    )
+}
 
   
   
