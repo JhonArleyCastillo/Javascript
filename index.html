@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conversor de Unidades</title>
+  <script src="./CDU.JS"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Converson de Unidades</h1>
+
+  <label for="inputValue">Value:</label>
+  <input type="number" id="inputValue" placeholder="Enter value" oninput="convertUnits()">
+
+  <label for="unitType">Convertir a:</label>
+  <select id="unitType" onchange="convertUnits()">
+    <option value="length" selected>Metro Lineal</option>
+    <option value="area">Area</option>
+    <option value="Volumen">Volumen</option>
+  </select>
+
+  <label for="unitSelect">Convert to:</label>
+  <select id="unitSelect" onchange="convertUnits()">
+    <!--Unidades lineales-->
+    <option value="Km">Kilometers (Km)</option>
+    <option value="Hm">Hectometers (Hm)</option>
+    <option value="Dm">Decimeters (Dm)</option>
+    <option value="m">Meters (m)</option>
+    <option values="dm">Decimetros(dm)</option>
+    <option value="cm">Centimeters (cm)</option>
+    <option value="mm">Millimeters (mm)</option>
+  <label for="unitSelect">Convert to:</label>
+  <select id="unitSelect" onchange="convertUnits()">
+    <!-- Unidades de Area -->
+    <option value="Km2" style="display:none">Kilometros cuadrados (Km<sup>2</sup>)</option>
+    <option value="Ha" style="display:none">Hectarea (Ha)</option>
+    <option value="m2" style="display:none">Metros Cuadrados (m<sup>2</sup>)</option>
+    <option value="dm2" style="display:none">Decimetros Cuadrados (dm<sup>2</sup>)</option>
+    <option value="cm2" style="display:none">Centimetros Cuadrados (cm<sup>2</sup>)</option>
+    <option value="mm2" style="display:none">Milimetros Cuadrados (mm<sup>2</sup>)</option>
+  <label for="unitSelect">Convert to:</label>
+  <select id="unitSelect" onchange="convertUnits()">
+    <!-- Unidades de Volumen-->
+    <option value="M3" style="display:none">Metro Cubico (M<sup>3</sup>)</option>
+    <option value="dm3" style="display:none">Decimetro Cubico(dm<sup>3</sup>)</option>
+    <option value="cm3" style="display:none">Centimetros Cubico (cm<sup>3</sup>)</option>
+    <option value="mm3" style="display:none">Milimetros Cubico(mm<sup>3</sup>)</option>
+    <option value="Lt" style="display:none">Litros (Lt)</option>
+    <option value="Gl" style="display:none">Galones (Gl)</option>
+
+  </select>
+
+  <label for="outputResult">Result:</label>
+  <span id="outputResult">m</span>
+
+  <script src="script.js"></script>
+</body>
+</html>
