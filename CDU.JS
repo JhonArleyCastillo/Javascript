@@ -2,14 +2,13 @@ function convertUnits() {
     const inputValue = parseFloat(document.getElementById('inputValue').value);
     const unitType = document.getElementById('unitType').value;
     const unitSelect = document.getElementById('unitSelect');
-  
     let sinbuni;//simbolo de unidad
   
     if (unitType === 'lineal') {
       sinbuni = 'm';
     } else if (unitType === 'area') {
       sinbuni= 'm2'; 
-    }else if { 
+    }else if (unitType === 'volumen'){ 
         sinbuni = "m3";
     }
     }
