@@ -3,19 +3,19 @@ function convertUnits() {
     const unitType = document.getElementById('unitType').value;
     const unitSelect = document.getElementById('unitSelect');
   
-    let unitSymbol;
+    let sinbuni;//simbolo de unidad
   
-    if (unitType === 'Lineal') {
-      unitSymbol = 'm'; // Length unit symbol
-    } else if (unitType === 'Area') {
-      unitSymbol = 'm<sup>2</sup>'; // Area unit symbol
-    }else if (unitType === "Volumen"){
-        unitSymbol = "m<sup>3</sup>";
+    if (unitType === 'lineal') {
+      sinbuni = 'm';
+    } else if (unitType === 'area') {
+      sinbuni= 'm2'; 
+    }else if { 
+        sinbuni = "m3";
     }
     }
   
     // conversor de unidades lineales
-    if (unitType === 'Lineal') {
+    if (unitType === 'lineal') {
       for (let i = 0; i < unitSelect.options.length; i++) {
         if (unitSelect.options[i].value.endsWith('2')) {
           unitSelect.options[i].style.display = 'none';
@@ -24,7 +24,7 @@ function convertUnits() {
         }
       }
     //conversor de unidades al cuadrado^2
-    }if (unitType === 'Area') {
+    }if (unitType === 'area') {
       for (let i = 0; i < unitSelect.options.length; i++) {
         if (unitSelect.options[i].value.endsWith('2')) {
           unitSelect.options[i].style.display = '';
@@ -34,7 +34,7 @@ function convertUnits() {
       }
     
     //conversor de unidades a volumen^3
-    } else if (unitType === 'Volumen') {
+    } else if (unitType === 'volumen') {
     for (let i = 0; i < unitSelect.options.length; i++) {
       if (unitSelect.options[i].value.endsWith('2')) {
         unitSelect.options[i].style.display = '';
@@ -48,14 +48,14 @@ function convertUnits() {
       let result;
   
       switch (unitSelect.value) {
-        // Length unit conversions
-        case 'Km':
+        // conversor de unidades metro lineal
+        case 'km':
           result = inputValue / 1000; // 1 kilometer = 1000 meters
           break;
-        case 'Hm':
+        case 'hm':
           result = inputValue / 100; // 1 hectometer = 100 meters
           break;
-        case 'Dm':
+        case 'dm':
           result = inputValue * 10; // 1 decimeter = 0.1 meters
           break;
         case 'm':
@@ -68,11 +68,11 @@ function convertUnits() {
           result = inputValue * 1000; // 1 millimeter = 0.001 meters
           break;
   
-        // Area unit conversions
-        case 'Km2':
+        // conversor de unidades area
+        case 'km2':
           result = inputValue / 1000000; // 1 kilometro cuadrado= 1,000,000 metros cuadrados
           break;
-        case 'Ha':
+        case 'ha':
           result = inputValue / 10000; // 1 hectarea = 10,000 metros cuadrados
           break;
         case 'm2':
@@ -88,8 +88,8 @@ function convertUnits() {
           result = inputValue * 1000000; // 1 milimetro cuadrado = 0.000001 metros cuadrados
           break;
         
-        // Unidades de Volumenes
-        case 'M<sup>3</sup>':
+        //Conversor a Unidades de Volumenes
+        case 'm3':
           result = inputValue / 1000000; // 1 metro cubico
           break;
         case 'dm<sup>3</sup>':
@@ -101,17 +101,17 @@ function convertUnits() {
         case 'mm<sup>3</sup>':
           result = inputValue * 100; // 1 milimetro cubico
           break;
-        case 'Lt':
+        case 'lt':
           result = inputValue * 1000; // 1 Litro
           break;
-        case 'Gl':
+        case 'gl':
           result = inputValue * 264.172; // 1 Galon
           break;
         default:
           result = 'Invalid unit';
       }
   
-      document.getElementById('outputResult').innerText = result.toFixed(6) + ' ' + unitSymbol;
+      document.getElementById('outputResult').innerText = result.toFixed(6) + ' ' + sinbuni;
     } else if (
       document.getElementById('outputResult').innerText = '',
     )if(
