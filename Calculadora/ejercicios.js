@@ -30,7 +30,7 @@ function sumar(num1, num2) {
   } else if (edad <= 17){
     alert("Eres menor de edad. Tu edad es: " + edad);
   }
- else {
+ else if{
   alert("Por favor, ingresa un número válido para la edad.");
 }*/
 
@@ -157,9 +157,12 @@ let person2= parseFloat(prompt("edad"));
 if (person1 > person2){
   alert(person1n + person1 + "es mayor que " + person2n + person2 );
 }
- else{
-  alert(person2n + person2 + " es mayor que" + person1n + person1 );
- }*/
+  else if(person2 < person1){
+  alert(person2n, + person2, + " es mayor que", + person1n + person1 );
+}
+else {
+ alert(" Tienen la misma edad ")
+}*/
 
 //ejercicio 10
 
