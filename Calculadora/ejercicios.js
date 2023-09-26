@@ -24,14 +24,14 @@ function sumar(num1, num2) {
   */
 
 //ejercicio 1
-//let edad = parseInt(prompt("Introduce tu edad"))
+//let edad = parseInt(prompt("Introduce tu edad"));
 //  if (edad >= 18) {
-    //  alert("Eres mayor de edad. Tu edad es: " + edad)
+    //  alert("Eres mayor de edad. Tu edad es: " + edad);
   //} else if {
-    //alert("Eres menor de edad. Tu edad es: " + edad)
+    //alert("Eres menor de edad. Tu edad es: " + edad);
   //}
 //} else {
-  //alert("Por favor, ingresa un número válido para la edad.")
+  //alert("Por favor, ingresa un número válido para la edad.");
 //}
 
 //ejercicio 2//
@@ -39,39 +39,39 @@ function sumar(num1, num2) {
 /*let promedio = (nota1 + nota2 + nota3) / 3;
     return promedio;
     if (promedio >= 6) {
-      alert( "El estudiante ha aprobado el curso con un promedio de " + promedio)
+      alert( "El estudiante ha aprobado el curso con un promedio de " + promedio);
     } else {
-      alert( "El estudiante ha reprobado el curso con un promedio de " + promedio)
+      alert( "El estudiante ha reprobado el curso con un promedio de " + promedio);
     }
-  let nota1 = parseInt(prompt("Introduce la primera nota (de 1 a 10)"))
-  let nota2 = parseInt(prompt("Introduce la segunda nota (de 1 a 10)"))
-  let nota3 = parseInt(prompt("Introduce la tercera nota (de 1 a 10)"))
+  let nota1 = parseInt(prompt("Introduce la primera nota (de 1 a 10)"));
+  let nota2 = parseInt(prompt("Introduce la segunda nota (de 1 a 10)"));
+  let nota3 = parseInt(prompt("Introduce la tercera nota (de 1 a 10)"));
       else if {
-      alert("Las notas deben estar en el rango de 1 a 10.")
+      alert("Las notas deben estar en el rango de 1 a 10.");
     }
     else {
-    alert("Por favor, ingresa números válidos para las notas.")
+    alert("Por favor, ingresa números válidos para las notas.");
   }
   */
  //ejercicio 3//
 
- /*let numeroa =parseInt(prompt("escriba el numeroA"))
- let numerob =parseInt(prompt("escriba el numeroB"))
+ /*let numeroa =parseInt(prompt("escriba el numeroA"));
+ let numerob =parseInt(prompt("escriba el numeroB"));
  if (numeroa > numerob) {
-   alert('A es mayor que B')
+   alert('A es mayor que B');
  } 
  else if ('numeroa < numerob') {
-   alert('A es menor que B')
+   alert('A es menor que B');
  } 
  else {
-   alert('A es igual a B')
+   alert('A es igual a B');
   }
  */
 //ejercicio 4//
 
 /*const numeros = [];
 for (let i = 0; i < 10; i++) {
-  const numero = parseInt(prompt('Introduce el número ${i + 1}:'))
+  const numero = parseInt(prompt('Introduce el número ${i + 1}:'));
   if (!isNaN(numero)) {
     numeros.push(numero)
   } else {
@@ -89,14 +89,14 @@ alert('Números en orden ascendente: ' + numeros.join(', '));
 
 if (!isNaN(peso)) {
   else if (peso <= 40) {
-    alert("Persona baja de peso")
+    alert("Persona baja de peso");
   } else if (peso >= 41 && peso <= 70) {
-    alert("Persona en rango promedio")
+    alert("Persona en rango promedio");
   } else if {
-    alert("Persona con sobrepeso")
+    alert("Persona con sobrepeso");
   }
 } else {
-  alert("Por favor, ingresa un peso válido.")
+  alert("Por favor, ingresa un peso válido.");
 }
 */
 
@@ -134,7 +134,7 @@ switch (numerodia) {
 alert('Día {numerodia}: {diaSemana}');
 */
 // ejercicio 7
-/*let comprat= parseFloat(prompt ("Ingrese el valor total de la compra"))
+/*let comprat= parseFloat(prompt ("Ingrese el valor total de la compra"));
 let descuento;
 if(comprat >= 1000){descuento = comprat * 0.2;}
 else{descuento = comprat * 0.05;}
@@ -145,44 +145,44 @@ alert("la cantidad a pagar es " + pagototal + "pesos");*/
 
 /*let horas = parseInt(prompt("Introduce tus horas laboradas"));
 if (horas <= 40){
-    alert("has ganado $16000")}
+    alert("has ganado $16000");}
   else {
     (
-      alert("has ganado $20000")
+      alert("has ganado $20000");
     )
   }*/
 
 // ejercicio 9
-/*let person1n=(prompt("nombre"))
-let person1= parseInt(prompt("edad"))
-let person2n= (prompt("nombre"))
-let person2= parseInt(prompt("edad"))
+/*let person1n=(prompt("nombre"));
+let person1= parseInt(prompt("edad"));
+let person2n= (prompt("nombre"));
+let person2= parseInt(prompt("edad"));
 if (person1 > person2){
-  alert(person1n + person1 + "es mayor que " + person2n + person2)
+  alert(person1n + person1 + "es mayor que " + person2n + person2 );
 }
  else{
-  alert(person2n + person2 + " es mayor que" + person1n + person1 )
+  alert(person2n + person2 + " es mayor que" + person1n + person1 );
  }*/
 
 //ejercicio 10
 
-/*let comprat= parseInt(prompt ("Ingrese el total de camisas de la compra"))
+/*let comprat= parseInt(prompt ("Ingrese el total de camisas de la compra"));
 let descuento;
 if(comprat >= 3){
-  alert("su descuento es del 20%")
+  alert("su descuento es del 20%");
 }
 else{
-  (alert("su descuento es del 10 %"))
+  alert("su descuento es del 10 %");
 }*/
 
 //ejercicio 11
 
-let num1= parseInt(prompt("Ingrese su numero1"))
-let num2= parseInt(prompt("ingrese numero 2"))
+let num1= parseInt(prompt("Ingrese su numero1"));
+let num2= parseInt(prompt("Ingrese numero 2"));
 if (num1 = num2){
-  alert (num1*num2)
+  alert (num1 * num2);
 }
 else{
-  alert(num1+num2)
+  alert(num1 + num2);
 }
     
