@@ -24,43 +24,41 @@ function sumar(num1, num2) {
   */
 
 //ejercicio 1
-//let edad = parseInt(prompt("Introduce tu edad"));
-//  if (edad >= 18) {
-    //  alert("Eres mayor de edad. Tu edad es: " + edad);
-  //} else if {
-    //alert("Eres menor de edad. Tu edad es: " + edad);
-  //}
-//} else {
-  //alert("Por favor, ingresa un número válido para la edad.");
-//}
+/*let edad = parseFloat(prompt("Introduce tu edad"));
+ if (edad >= 18) {
+      alert("Eres mayor de edad. Tu edad es: " + edad);
+  } else if (edad <= 17){
+    alert("Eres menor de edad. Tu edad es: " + edad);
+  }
+ else {
+  alert("Por favor, ingresa un número válido para la edad.");
+}*/
 
 //ejercicio 2//
 
-/*let promedio = (nota1 + nota2 + nota3) / 3;
-    return promedio;
-    if (promedio >= 6) {
-      alert( "El estudiante ha aprobado el curso con un promedio de " + promedio);
-    } else {
-      alert( "El estudiante ha reprobado el curso con un promedio de " + promedio);
-    }
-  let nota1 = parseInt(prompt("Introduce la primera nota (de 1 a 10)"));
-  let nota2 = parseInt(prompt("Introduce la segunda nota (de 1 a 10)"));
-  let nota3 = parseInt(prompt("Introduce la tercera nota (de 1 a 10)"));
-      else if {
-      alert("Las notas deben estar en el rango de 1 a 10.");
+/*let nota1 = parseFloat(prompt("Introduce la primera nota (de 1 a 10)"));
+let nota2 = parseFloat(prompt("Introduce la segunda nota (de 1 a 10)"));
+let nota3 = parseFloat(prompt("Introduce la tercera nota (de 1 a 10)"));
+let promedio = (nota1 + nota2 + nota3) / 3;
+if (promedio >= 6) {
+  alert( "El estudiante ha aprobado el curso con un promedio de " + promedio);
+  }else if (promedio < 6){
+    alert( "El estudiante ha reprobado el curso con un promedio de " + promedio);
     }
     else {
-    alert("Por favor, ingresa números válidos para las notas.");
-  }
+      alert("Las notas deben estar en el rango de 1 a 10.");
+    }
+document.write (promedio)
+  
   */
  //ejercicio 3//
 
- /*let numeroa =parseInt(prompt("escriba el numeroA"));
- let numerob =parseInt(prompt("escriba el numeroB"));
+ /*let numeroa =parseFloat(prompt("escriba el numeroA"));
+ let numerob =parseFloat(prompt("escriba el numeroB"));
  if (numeroa > numerob) {
    alert('A es mayor que B');
  } 
- else if ('numeroa < numerob') {
+ else if (numeroa < numerob) {
    alert('A es menor que B');
  } 
  else {
@@ -71,7 +69,7 @@ function sumar(num1, num2) {
 
 /*const numeros = [];
 for (let i = 0; i < 10; i++) {
-  const numero = parseInt(prompt('Introduce el número ${i + 1}:'));
+  const numero = parseFloat(prompt('Introduce el número ${i + 1}:'));
   if (!isNaN(numero)) {
     numeros.push(numero)
   } else {
@@ -87,51 +85,50 @@ alert('Números en orden ascendente: ' + numeros.join(', '));
 
 /*let peso = parseFloat(prompt("Ingresa tu peso en Kg:"));
 
-if (!isNaN(peso)) {
-  else if (peso <= 40) {
-    alert("Persona baja de peso");
-  } else if (peso >= 41 && peso <= 70) {
-    alert("Persona en rango promedio");
-  } else if {
-    alert("Persona con sobrepeso");
+if (!isNaN(peso)) 
+ if ( peso <= 40 ){
+       alert("Persona baja de peso");
+  }  else if (peso >= 41 && peso <= 70) {
+       alert("Persona en rango promedio");
+  }   else if ( peso => 71){
+        alert("Persona con sobrepeso");
   }
-} else {
+         else {
   alert("Por favor, ingresa un peso válido.");
 }
+
 */
 
 //ejercicio 6
 
-/*let numerodia = parseInt(prompt("Introduce un número entre 1 y 7:"));
-
-let diasemana;
+/*let numerodia = parseInt(prompt("Introduce un número entre 1 a 7:"));
 
 switch (numerodia) {
   case 1:
-    diasemana = "Lunes";
+    diasemana = alert("Lunes");
     break;
   case 2:
-    diasemana = "Martes";
+    diasemana = alert("Martes");
     break;
   case 3:
-    diasemana = "Miércoles";
+    diasemana = alert("Miercoles");
     break;
   case 4:
-    diasemana = "Jueves";
+    diasemana = alert("Jueves");
     break;
   case 5:
-    diasemana = "Viernes";
+    diasemana = alert("Viernes");
     break;
   case 6:
-    diasemana = "Sábado";
+    diasemana = alert("Sabado");
     break;
   case 7:
-    diasemana = "Domingo";
+    diasemana = alert("Domingo");
     break;
   default:
-    diasemana = "Número de día no válido, por favor ingresa un número entre 1 y 7.";
+    diasemana = "Número de día no válido, por favor ingresa un número entre 1 a 7.";
+    break;
 }
-alert('Día {numerodia}: {diaSemana}');
 */
 // ejercicio 7
 /*let comprat= parseFloat(prompt ("Ingrese el valor total de la compra"));
@@ -143,7 +140,7 @@ alert("la cantidad a pagar es " + pagototal + "pesos");*/
 
 //ejercicio 8
 
-/*let horas = parseInt(prompt("Introduce tus horas laboradas"));
+/*let horas = parseFloat(prompt("Introduce tus horas laboradas"));
 if (horas <= 40){
     alert("has ganado $16000");}
   else {
@@ -154,9 +151,9 @@ if (horas <= 40){
 
 // ejercicio 9
 /*let person1n=(prompt("nombre"));
-let person1= parseInt(prompt("edad"));
+let person1= parseFloat(prompt("edad"));
 let person2n= (prompt("nombre"));
-let person2= parseInt(prompt("edad"));
+let person2= parseFloat(prompt("edad"));
 if (person1 > person2){
   alert(person1n + person1 + "es mayor que " + person2n + person2 );
 }
@@ -177,8 +174,8 @@ else{
 
 //ejercicio 11
 
-let num1= parseInt(prompt("Ingrese su numero1"));
-let num2= parseInt(prompt("Ingrese numero 2"));
+let num1= parseFloat(prompt("Ingrese su numero1"));
+let num2= parseFloat(prompt("Ingrese numero 2"));
 if (num1 = num2){
   alert (num1 * num2);
 }
