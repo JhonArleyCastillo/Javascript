@@ -177,7 +177,7 @@ else{
 
 //ejercicio 11
 
-let num1= parseFloat(prompt("Ingrese su numero1"));
+/*let num1= parseFloat(prompt("Ingrese su numero1"));
 let num2= parseFloat(prompt("Ingrese numero 2"));
 if (num1 = num2){
   alert (num1 * num2);
@@ -185,4 +185,15 @@ if (num1 = num2){
 else{
   alert(num1 + num2);
 }
-    
+ */   
+
+//ejercicio 13
+
+let genero=prompt("Escriba su genero: masculino o femenino").toLowerCase('es');
+let edad =parseFloat (prompt("Ingrese su edad"));
+if (genero ="masculino" && edad >= 18) {
+  alert("Es apto para prestar servicio");
+}
+else {
+  alert ("No es apto");
+}

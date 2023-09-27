@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Calculadora Básica</h1>
+<!-- <h1>Calculadora Básica</h1>
 
 <label for="num1">Número 1:</label>
 <input type="number" id="num1" placeholder="Ingresa el primer número">
@@ -19,38 +19,9 @@
 <button onclick="mostrarResultado('division')">Dividir</button>
 
 <label for="resultado">Resultado:</label>
-<input type="text" id="resultado" disabled>
+<input type="text" id="resultado" disabled> -->
 
-<script src"./ejercicios.js">
-  function mostrarResultado(operacion) {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    let resultado;
-
-    switch (operacion) {
-      case 'suma':
-        resultado = num1 + num2;
-        break;
-      case 'resta':
-        resultado = num1 - num2;
-        break;
-      case 'multiplicacion':
-        resultado = num1 * num2;
-        break;
-      case 'division':
-        if (num2 !== 0) {
-          resultado = num1 / num2;
-        } else {
-          resultado = 'No se puede dividir por cero';
-        }
-        break;
-      default:
-        resultado = 'Operación no válida';
-    }
-
-    document.getElementById('resultado').value = resultado;
-  }
-</script>
+<script src="./ejercicios.js"></script>
 
 </body>
 </html>
