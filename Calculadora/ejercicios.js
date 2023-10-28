@@ -189,11 +189,38 @@ else{
 
 //ejercicio 13
 
-let genero=prompt("Escriba su genero: masculino o femenino").toLowerCase('es');
+/*let genero=prompt("Escriba su genero: masculino o femenino").toLowerCase('es');
 let edad =parseFloat (prompt("Ingrese su edad"));
 if (genero ="masculino" && edad >= 18) {
   alert("Es apto para prestar servicio");
 }
 else {
   alert ("No es apto");
+}*/
+/*let peso = prompt("ingrese su peso");
+switch(true) {
+    case (peso <= 40):
+        alert("persona baja de peso");
+        break;
+    case (peso > 41 && peso <= 70):
+        alert("persona en peso promedio");
+        break;
+    case (peso > 70):
+        alert("persona con sopbrepeso");
+        break;
+}*/
+for (let i = 0; i < 5; i++) {
+  nombres(i) = prompt("Ingrese el nombre de la persona " + i + 1);
+  pesos(i) = prompt("Ingrese el peso de la persona " + i + 1);
+switch(true) {
+    case (pesos <= 40):
+        alert("persona baja de peso" + nombres + pesos);
+        break;
+    case (pesos > 41 && pesos <= 70):
+        alert("persona en peso promedio" + nombres + pesos);
+        break;
+    case (pesos > 70):
+        alert("persona con sopbrepeso" + nombres + pesos);
+        break;
 }
+}  
